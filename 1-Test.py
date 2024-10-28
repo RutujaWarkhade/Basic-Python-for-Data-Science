@@ -4,6 +4,30 @@ Created on Sun Oct 27 20:47:37 2024
 
 @author: om
 """
+"""
+Q1. Write a python program to print all even numbers from a given list of 
+numbers in the same order and stop printing any after 237 in the sequence. 
+Sample numbers list: 
+numbers = [     
+386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 
+328, 615, 953, 345,  
+399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 
+950, 626, 949, 687, 217,  
+815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 
+843, 831, 445, 742, 717, 958,743, 527] 
+"""
+numbers = [     
+386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 
+328, 615, 953, 345,  
+399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 
+950, 626, 949, 687, 217,  
+815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 
+843, 831, 445, 742, 717, 958,743, 527]
+for i in numbers:
+    if i==237:
+        break
+    print(i)
+
 
 """
 Q2. Write a python program to find a list of integers with exactly two 
@@ -76,39 +100,3 @@ l1 = max(n),min(p)
 print(list(l1))
 
 
-"""
-2. Write a Python program to find the median of below three values. 
-Values: (25,55,65) 
-"""
-Values= [25,55,65] 
-a=int(len(Values)/2)
-print(Values[a])
-
-"""
-3. Write a program to create a decorator function to measure the 
-execution time of a function.
-"""
-
-"""
-4. Write a python program that opens a file and handles a 
-FileNotFoundError exception if the file does not exist. 
-"""
-try:
-    import os
-    with open("data.txt") as raw_data:
-        print(raw_data.read())
-except FileNotFoundError:
-    print("FileNotFoundError")
-    
-"""
-5. Write a python program to find the intersection of two given arrays 
-using Lambda. 
-Original arrays: 
-[1, 2, 3, 5, 7, 8, 9, 10] 
-[1, 2, 4, 8, 9] 
-Intersection of the said arrays: [1, 2, 8, 9]
-"""
-a=[1, 2, 3, 5, 7, 8, 9, 10] 
-b=[1, 2, 4, 8, 9] 
-c=list(filter(lambda x : x in a,b))
-print(c)
